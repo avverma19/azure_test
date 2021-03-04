@@ -9,6 +9,7 @@ end=$(date -u -d "30 minutes" '+%Y-%m-%dT%H:%MZ')
 initializationMarker=$(test ! -e /home/bitnami/initializationMarker.log && echo "0"|| echo "1")
 if [ $initializationMarker == 0 ]
 then
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 echo "Current date: $end"
 fi
 
