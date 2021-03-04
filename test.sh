@@ -27,7 +27,7 @@ if [ $existVal == 'true' ]
 then
 echo "Current date: $end"
 # Download the blob files 
-#az storage blob download --container-name avtest2storagelicensecontainer --account-name avtest2storagelicense -n template.json -f /home/avadmin/template.json
+az storage blob download --container-name avtest2storagelicensecontainer --account-name avtest2storagelicense -n template.json -f /home/avadmin/template.json
 fi
 
 #  Create initialization marker
