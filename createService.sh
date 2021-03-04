@@ -42,10 +42,10 @@ Description= testing service
 ExecStart=sudo bash /opt/scripts/customization.sh $1 $2
 
 [Install]
-WantedBy=multi.user.target
+WantedBy=multi-user.target
 EndOfMessage
 
-chmod 777 /opt/scripts/customizationService.service
+chmod 664 /opt/scripts/customizationService.service
 cp /opt/scripts/customizationService.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable customizationService.service
