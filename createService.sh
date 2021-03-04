@@ -48,3 +48,4 @@ EndOfMessage
 chmod 777 /opt/scripts/customizationService.service
 cp /opt/scripts/customizationService.service /etc/systemd/system/
 sudo systemctl daemon-reload
+sudo systemctl enable customizationService.service
