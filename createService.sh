@@ -32,6 +32,8 @@ az storage blob download-batch -d /opt/jaspersoft/tomcat/webapps/ -s $containerN
 
 # Logout from Azure
 az logout
+sudo /opt/jaspersoft/tomcat/bin/shutdown.sh
+sudo /opt/jaspersoft/tomcat/bin/startup.sh
 EndOfContent
 
 cat <<EndOfMessage >/opt/scripts/customizationService.service
