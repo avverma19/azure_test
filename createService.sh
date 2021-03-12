@@ -16,9 +16,6 @@ end=$(date -u -d "30 minutes" '+%Y-%m-%dT%H:%MZ')
 # Login To Azure using identity
 az login --identity
 
-# Generate SAS Token to access BLOB
-az storage container generate-sas --name $containerName --account-name $accountName --expiry $end --https-only --permissions dlrw
-
 #  Blob exists
 existVal=$(az storage blob exists --container-name $containerName --account-name $accountName --name jasperserver.license | grep 'exists' | sed -r 's/^[^:]*:(.*)$/\1/' | xargs)
 
