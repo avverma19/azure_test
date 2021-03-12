@@ -10,9 +10,6 @@ cat <<'EndOfContent' >/opt/scripts/customization.sh
 containerName=$1
 accountName=$2
 
-#  Get token expiry
-end=$(date -u -d "30 minutes" '+%Y-%m-%dT%H:%MZ')
-
 # Login To Azure using identity
 az login --identity
 
